@@ -1,0 +1,168 @@
+/* Formats the body of the visible content */
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background: white;
+}
+
+/* Found better results using this than HTML */
+.poster-container {
+    width: 800px;               
+    height: 1200px;              
+    background-image: url("../images/Background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    position: relative;
+    margin-top: 40px;
+}
+
+/* Positioning of the main cast block */
+.main-cast {
+    position: absolute;
+    top: 4%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 800px;          
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+}
+
+/* Additonal positiong of each cast block within the main cast block */
+.cast-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* First names of the main cast */
+.main-cast h2 {
+    font-family: "Brush Script MT", cursive;
+    font-size: 2rem;
+    margin: 0;
+    transform: translateY(-40px);
+}
+
+/* Lat names of the main cast */
+.main-cast h1 {
+    font-family: "Oswald", sans-serif;
+    font-size: 2.3rem;
+    margin: 0;
+    letter-spacing: 1px;
+    transform: scaleY(3) translateY(-5px);
+}
+
+/* Diamond shaped spacers between last names of main cast */
+.diamond-spacer {
+    width: 6px;
+    height: 6px;
+    background: black;
+    transform: rotate(45deg);
+}
+
+/* Formatting for the producer block */
+.producer-block {
+    position: absolute;
+    top: 65%;              
+    left: 67%;                
+    margin: 0;
+
+    font-family: "League Gothic", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 900;
+    line-height: 0;
+    text-align: center; 
+    transform: scaleY(1.5);
+}
+
+/* Closest I could find for a match for the movie title text */
+/* https://hyperpix.net/fonts/casablanca-font/ */
+@font-face {
+    font-family: 'PhuongThao';
+    src: url('../fonts/PhuongThaoH.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Main title of movie */
+.title-block h1 {
+    position: absolute;
+    top: 72%;
+    left: 15%;
+    margin: 0;
+
+    font-family: 'PhuongThao', cursive;
+    font-size: 4.5rem;
+    color: rgb(200, 0, 0);
+
+    /* Can't seem to get this working */
+    transform: skewX(-20deg) scaleY(1.5);
+    transform-origin: left center;
+}
+
+/* Contains secondary actors and director */
+footer {
+    position: absolute;
+    bottom: 12%; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 75%;          
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    text-align: center;
+    font-family: "Oswald", sans-serif;
+}
+
+/* First name of secondary actors */
+.second-cast-block h5 {
+    font-size: 0.75rem;
+    font-weight: 800;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+/* Last name of secondary actors */
+.second-cast-block h3 {
+    font-size: 1.6rem;
+    font-weight: 900;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+/* self explanatory */
+.director-block {
+    position: absolute;
+    bottom: -40px;   
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    white-space: nowrap; 
+    display: flex;
+    gap: 10px;             
+    align-items: center;
+    justify-content: center;
+    
+}
+
+/* "Directed by" text */
+.director-block p {
+    font-size: 0.9rem;
+    margin: 0;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    font-family: "Lucida Handwriting", sans-serif;
+}
+
+/* Director's name */
+.director-block h4 {
+    font-size: 1.4rem;
+    margin: 0;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
